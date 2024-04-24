@@ -1,12 +1,11 @@
 ## what is lambda expression:
-    nameless,
+    Nameless,
     without return type,
     without access modifier,
-    anonymous
-    function
+    anonymous function
 
 
-example 1: print hello world
+### Example 1: print hello world
 
 without lambda expression:
 ```java
@@ -21,10 +20,10 @@ with lambda expression:
 - no need to write access modifier, return type, method name
 
 
-example 2: add two numbers
+### Example 2: add two numbers
 
 without lambda expression:
-```
+```java
 public int add(int a, int b){
     return a+b;
 }
@@ -34,16 +33,17 @@ with lambda expression:
 ```java
 (a,b) -> a + b;
 ```
-- NO need to write:
+#### NO need to write:
   - Access modifier
   - Return type
   - Method name
   - Return keyword when only one statement is there
   - Curly braces when only one statement is there
-  - Data types of parameters
+  - Data types of parameters(Type inference)
   - Parenthesis when only one parameter is there
 
 example:
 ```java
 s -> s.length();
 ```
+
