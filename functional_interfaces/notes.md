@@ -83,10 +83,12 @@ public interface C extends P{
 
 ### Case 4:
 
+If an interface extends functional interface and child interface contains abstract method having different name as that of parent SAM, then child interface is not a Functional interface.
+
 
 ```java
 
-// NO ERROR : NO @FunctionalInterface annotation on child interface
+// NO ERROR : As NO @FunctionalInterface annotation is given on child interface
 
 
 @FunctionalInterface
