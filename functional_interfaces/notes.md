@@ -63,7 +63,8 @@ public interface C extends P{
 
 ### Case 3:
 
-If an interface extends functional interface and child interface contains exactly one abstract method but same as parent, then child interface is a Functional interface.
+If an interface extends functional interface and child interface contains exactly 
+one abstract method but same as parent, then child interface is a Functional interface.
 
 ```java
 
@@ -99,4 +100,45 @@ public interface P{
 public interface C extends P{
     void m2()
 }
+```
+
+## Invoking lambda expressions using functional interfaces:
+
+### Without lambda expressions:
+```java
+
+interface Interf{
+    void m1();
+}
+
+public class Demo implements Interf{
+    public void m1(){
+        System.out.println("m1 method implementation");
+    }
+}
+
+public class Test{
+    public static void main(String[] args){
+        Interf i = new Demo();
+        i.m1();
+    }
+}
+
+
+```
+
+### With lambda expressions:
+```java
+
+interface Interf{
+    void m1();
+}
+
+public class Test{
+    public static void main(String[] args){
+        Interf i = () -> System.out.println("m1 method implementation");
+        i.m1();
+    }
+}
+
 ```
