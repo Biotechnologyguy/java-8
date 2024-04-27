@@ -3,6 +3,7 @@
 - They can have multiple **default methods**.
 - They can have multiple **static methods**.
 - They are used to call lambda expressions.
+- Functional Interfaces acts as a **target type** for lambda expressions.
 - **e.g.** 
   - Runnable => `run()`
   - Callable => `call()`
@@ -174,4 +175,29 @@ t.start();
 for (int k = 0; k < 10; k++) {
         System.out.println("Main Thread");
 }
+```   
+
+### why functional interface should have only one abstract method?
+
+- If functional interface has more than one abstract method, then lambda expression can't be used to call that interface.
+
+```java
+
+//java: incompatible types: Test.Interf2 is not a functional interface
+//multiple non-overriding abstract methods found in interface Test.Interf2
+
+interface Interf2{
+    void m1();
+    void m2();
+}
+
+public class Test{
+    public static void main(String[] args){
+        Interf2 i = () -> System.out.println("m1 method implementation");
+        i.m1();
+    }
+}
+
 ```
+
+

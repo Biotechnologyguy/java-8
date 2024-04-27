@@ -37,6 +37,12 @@ public class Test {
         }
     }
 
+
+    interface Interf2{
+        void m1();
+        void m2();
+    }
+
     public static void main(String[] args) {
 
 //        TestInterface test = (t) -> System.out.println("Hello World " + t);
@@ -64,7 +70,9 @@ public class Test {
         for (int k = 0; k < 10; k++) {
             System.out.println("Main Thread");
         }
-
+//        Gives error
+//        Interf2 i3 = () -> System.out.println("m1 method implementation");
+//        i3.m1();
     }
 
 
