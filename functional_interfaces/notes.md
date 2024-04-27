@@ -142,3 +142,36 @@ public class Test{
 }
 
 ```
+
+
+## Runnable interface:
+
+### Without lambda expressions:
+
+```java
+class MyRunnable implements Runnable{
+    public void run(){
+        for(int i=0; i<10; i++){
+            System.out.println("Child Thread" + i);
+        }
+    }
+
+```
+
+### With lambda expressions:
+
+```java
+
+Runnable r = () -> {
+    for(int i=0; i<10; i++){
+        System.out.println("Child Thread" + i);
+    }
+};
+
+Thread t = new Thread(r);
+t.start();
+
+for (int k = 0; k < 10; k++) {
+        System.out.println("Main Thread");
+}
+```
