@@ -43,6 +43,12 @@ public class Test {
         void m2();
     }
 
+//    @FunctionalInterface
+//    interface Interf4{
+//        void m1();
+//        void m2();
+//    }
+
     public static void main(String[] args) {
 
 //        TestInterface test = (t) -> System.out.println("Hello World " + t);

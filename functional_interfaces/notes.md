@@ -180,6 +180,7 @@ for (int k = 0; k < 10; k++) {
 ### why functional interface should have only one abstract method?
 
 - If functional interface has more than one abstract method, then lambda expression can't be used to call that interface.
+- It will give compilation error.
 
 ```java
 
@@ -200,4 +201,20 @@ public class Test{
 
 ```
 
+### what is advantage of @FunctionalInterface annotation?
+
+- If we use @FunctionalInterface annotation and try to add more than one abstract method, then it will give compilation error.
+
+```java
+
+//java: Unexpected @FunctionalInterface annotation
+//        Test.Interf2 is not a functional interface
+//multiple non-overriding abstract methods found in interface Test.Interf2
+
+@FunctionalInterface
+interface Interf2{
+    void m1();
+    void m2();
+}
+```
 
