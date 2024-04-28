@@ -79,3 +79,8 @@ map.put(3, "Three");
 map.forEach((k, v) -> System.out.println(k + " : " + v));
 ```
 
+## Comparator Interface :
+
+- Comparator interface is used **to sort the elements of user-defined class.**
+- It contains SAM (Single Abstract Method) called compare().
+- It is used to sort the elements of List.
