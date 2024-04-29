@@ -16,8 +16,6 @@ Welcome to my Java 8 learning repository! Here you'll find code examples and not
     - [CompletableFuture](#completablefuture)
     - [New APIs](#new-apis)
 3. [Code Examples](#code-examples)
-4. [Contributing](#contributing)
-5. [License](#license)
 
 ## Introduction
 
